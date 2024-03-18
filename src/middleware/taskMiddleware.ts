@@ -9,7 +9,7 @@ export class Validator {
       return res.status(400).json({ message: 'The field "title" is required' });
     }
   
-    if (body.title === '') {
+    if (body.title.trim() === '') {
       return res.status(400).json({ message: 'Title cannot be empty' });
     }
   
